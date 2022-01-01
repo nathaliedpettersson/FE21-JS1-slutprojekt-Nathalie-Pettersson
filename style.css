@@ -1,0 +1,132 @@
+/* Styles för header och form */
+h1 {
+    text-align: center;
+    font-family: 'Tourney', cursive;
+    font-size: 2.8rem; 
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 22rem;
+    margin: 0 auto 3rem;
+}
+
+label, button {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 0.7rem;
+}
+
+button {
+    background: black;
+    color: white;   
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-image: linear-gradient(90deg, #99AFF2 0%, #C4D4F2 49%, #99AFF2 80%, #C4D4F2 100%);
+    animation:slidebg 5s linear infinite;
+}
+
+/* Styles för nuvarande väder */
+#current-forecast {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    text-align: center;
+}
+
+#current-forecast h2 {
+    font-family: 'Tourney', cursive;
+    color:#F23D3D;
+}
+
+#current-forecast div p {
+    font-family: 'Oxygen', sans-serif;
+}
+
+#current-forecast div img {
+    width: 18vw;
+} 
+
+/* Styles för de fem kommande dagarna */
+#fiveday-header {
+    text-align: center;
+    font-family: 'Tourney', cursive;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#fiveday-forecast {
+    display: flex;
+    justify-content: center;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+#fiveday-forecast div {
+    border: 2px solid rgba(232, 236, 241);
+    background: rgba(236, 240, 241);
+    border-radius: 5px;
+    margin: 1rem;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#forecast-parent > p > img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: middle; 
+}
+
+#fiveday-forecast p {
+    text-align: center; 
+    font-family: 'Oxygen', sans-serif;
+}
+
+/* Style när felmeddelande visas */
+#error-message {
+    color:#F23D3D;
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Media queries */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    #fiveday-forecast {
+        display: flex;
+        justify-content: center;  
+        flex-direction: row;
+        flex-wrap:nowrap;
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 763px) and (orientation: landscape) {
+
+    #fiveday-forecast {
+        display: flex;
+        justify-content: center;  
+        margin: auto 5rem;
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 375px) {
+
+    #current-forecast div {
+        display: flex;
+        align-items: center; 
+        flex-direction: column;
+    }
+
+    #current-forecast div img {
+        width: 25vw;
+    }   
+  }

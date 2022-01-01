@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="js/anime.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+    <title>Weather App © NDP</title>
+</head>
+
+<body>
+    <header>
+        <h1>VÄDERAPP</h1>
+        <form>
+            <fieldset>
+                <legend>
+                    <label for="city">Sök på en stad</label>
+                    <input type="text" id="city" placeholder="Ex: Malmö, SE">
+                </legend>
+            </fieldset>
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </header>
+    <!-- Innehåll i div:ar skapas i script.js -->
+    <div id="current-forecast">
+        <!-- Här i ligger nuvarande väder -->
+    </div>
+
+    <h3 id="fiveday-header"></h3>
+    <div id="fiveday-forecast">
+        <!-- Här i ligger info om väder för fem dagar framåt -->
+    </div>
+
+    <div id="error-message">
+        <!-- Här ska ett error-meddelande till användaren visas -->
+    </div>
+
+</body>
+
+</html>
